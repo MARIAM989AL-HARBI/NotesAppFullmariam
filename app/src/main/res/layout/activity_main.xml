@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/mariam3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text=" Note-Mariam "
+            android:textAlignment="center"
+            android:textColor="#E45686"
+            android:textSize="55dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#74ADDA"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/note_recyclerView"
+                android:layout_width="349dp"
+                android:layout_height="428dp"
+                android:layout_margin="20dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/note_et"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_style"
+            android:ems="10"
+            android:hint="Add note:)"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/note_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:clickable="true"
+            android:scaleType="center"
+            app:fabCustomSize="55dp"
+            app:maxImageSize="30dp"
+            app:srcCompat="@drawable/add"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
